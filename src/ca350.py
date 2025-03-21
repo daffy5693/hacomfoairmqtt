@@ -403,8 +403,8 @@ def get_ewt():
         warning_msg('get_ewt function could not get serial data')
     else:
         if len(data) > 4:
-            EWTLowTemp = data[0] / 2.0 - 20
-            EWTHighTemp = data[1] / 2.0 - 20
+            EWTLowTemp = data[0]
+            EWTHighTemp = data[1]
             EWTSpeedUp = data[2]
 				
             if -1 < EWTSpeedUp < 100:
